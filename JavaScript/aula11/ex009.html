@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Você é estrangeiro ou não</h1>
+    Digite seu país <input type="text" name="txtps" id="txtps">
+    <input type="button" value="Verficar" onclick="Saber()">
+    <div id="res">
+
+    </div>
+    <script>
+        function Saber(){
+            var ps = window.document.querySelector('input#txtps')
+            var res = window.document.querySelector('div#res')
+            var pais = ps.value
+            res.innerHTML= `Você vive no ${pais}` 
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p><strong>então vc é Brasileiro</strong></p>`
+            } else {
+                res.innerHTML += `<p><strong>então vc é Estrangeiro</strong></p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>
